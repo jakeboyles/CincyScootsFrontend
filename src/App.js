@@ -102,6 +102,8 @@ class App extends Component {
           <div onClick={this.toggle.bind(this)} className="showHide">
             <span>Toggle</span>
           </div>
+
+          <span class="attr">A <a target="_blank" href="http://www.twitter.com/jakeboyles">@JakeBoyles</a> Project</span>
         </div>
         <MyMapComponent 
         containerElement={<div style={{ height: `900px` }} />}

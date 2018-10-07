@@ -4,6 +4,7 @@
 
 body, html {
   height:100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 select {
@@ -16,17 +17,18 @@ select {
 
 .runs .showHide {
   position: absolute;
-    top: 10px;
-    right: -60px;
-    background-color: black;
-    color: red;
-    padding: 10px;
-    font-size: .9em;
-    border-radius: 0px 10px 10px 0px;
+  top: 10px;
+  right: -73px;
+  background-color: rgba(0,0,0,.8);
+  color: #B85451;
+  padding: 10px;
+  font-size: .9em;
+  border-radius: 0px 10px 10px 0px;
+  text-transform: uppercase;
 }
 
 .runs {
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(0,0,0,.8);
   position: fixed;
   top: 00px;
   left: 0;
@@ -38,6 +40,20 @@ select {
 
 .runs.hide {
   left:-200px;
+}
+
+.attr {
+  color:#fff;
+  position: absolute;
+  bottom:0;
+  display:block;
+  width:100%;
+  bottom:20px;
+  text-align: center;
+}
+
+.attr a {
+  color: #B85451;
 }
 
 .runs h3 {
