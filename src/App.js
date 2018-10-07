@@ -51,6 +51,15 @@ class App extends Component {
     })
   }
 
+  toggle() {
+    const runs = document.querySelector('.runs');
+    if(runs.classList.contains('hide')) {
+      document.querySelector('.runs').classList.remove('hide');
+    } else {
+      document.querySelector('.runs').classList.add('hide');
+    }
+  }
+
   componentDidMount() {
     var url = 'https://whispering-headland-84040.herokuapp.com/runs'
     fetch(url).then(
@@ -75,8 +84,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div class="runs">
-        <img src={Logo} />
+        <div className="runs">
+        <img alt="logo" src={Logo} />
         <h2>Date and Time</h2>
           <select onChange={this.changeRun.bind(this)} name="runs" id="">
           {this.state.runs.map((run)=> {
@@ -89,6 +98,10 @@ class App extends Component {
           <button onClick={this.doTimeSequence.bind(this)}>Animate</button>
 
           {animating()}
+
+          <div onClick={this.toggle.bind(this)} className="showHide">
+            <span>Toggle</span>
+          </div>
         </div>
         <MyMapComponent 
         containerElement={<div style={{ height: `900px` }} />}
